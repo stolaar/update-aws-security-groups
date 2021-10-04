@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "env-cmd -f .env node index.js",
-    "detached": "pm2 start index.js"
+    "detached": "pm2 start ecosystem.config.js"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +13,9 @@
   "dependencies": {
     "@aws-sdk/client-ec2": "^3.34.0",
     "aws-sdk": "^2.999.0",
-    "env-cmd": "^10.1.0"
+    "dotenv": "^10.0.0",
+    "env-cmd": "^10.1.0",
+    "node-cron": "^3.0.0"
   },
   "devDependencies": {
     "pm2": "^5.1.2"
