@@ -1,8 +1,8 @@
 const { spawn } = require('child_process')
 
-function getIPAddress() {
+function getGitUsername() {
   return new Promise(fulfil => {
-    const process = spawn('curl', ['ifconfig.me'])
+    const process = spawn('git', ['config', 'user.name'])
     process.stdout.on('data', data => fulfil(data.toString()))
     process.on('close', () => fulfil(''))
     process.on('exit', () => fulfil(''))
@@ -10,4 +10,4 @@ function getIPAddress() {
   })
 }
 
-module.exports = getIPAddress
+module.exports = getGitUsername

@@ -21,7 +21,7 @@ module.exports = {
           IpRanges: [
             {
               CidrIp: ipAddress + '/32',
-              Description: description
+              Description: description.toString().trim()
             }
           ]
         }

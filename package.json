@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "env-cmd -f .env node index.js"
+    "start": "env-cmd -f .env node index.js",
+    "detached": "pm2 start index.js"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +14,8 @@
     "@aws-sdk/client-ec2": "^3.34.0",
     "aws-sdk": "^2.999.0",
     "env-cmd": "^10.1.0"
+  },
+  "devDependencies": {
+    "pm2": "^5.1.2"
   }
 }
